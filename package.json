@@ -1,0 +1,12 @@
+{
+  "name": "@cany/rem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "mobile",
+    "rem"
+  ],
+  "author": "KimoZhang <1193055507@qq.com>",
+  "license": "MIT"
+}
