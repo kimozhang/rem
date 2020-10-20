@@ -8,7 +8,7 @@ export default function debounce(
   options: DebounceOptions = {}
 ) {
   const opts: DebounceOptions = Object.assign({}, debounce.defaultOptions, options)
-  let timer: number
+  let timer: any
 
   return function(...args: any[]) {
     const context = this
