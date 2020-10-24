@@ -1,6 +1,6 @@
 {
   "name": "@cany/rem",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Transform unit px to rem",
   "main": "dist/rem.common.js",
   "module": "dist/rem.esm.js",
@@ -10,6 +10,7 @@
     "dist"
   ],
   "scripts": {
+    "demo": "http-server -o demo",
     "build": "rollup -c"
   },
   "keywords": [
@@ -19,6 +20,8 @@
   "license": "MIT",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "html-webpack-plugin": "^4.5.0",
+    "http-server": "^0.12.3",
     "rollup": "^2.32.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.28.0",
