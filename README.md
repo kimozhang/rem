@@ -1,4 +1,5 @@
-# Convert unit px to rem.
+# Rem
+Convert unit px to rem.
 
 ## Install
 
@@ -6,6 +7,12 @@
 $ npm i @cany/rem
 # or
 $ yarn add @cany/rem
+```
+
+## CDN
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@cany/rem/dist/rem.min.js"></script>
 ```
 
 ## Example
@@ -37,5 +44,7 @@ You can know its value by simple calculations.
 - base: baseline. default is 100 and recommended.
 - maxWidth: max width of client. default is null, when it is set and more than it, the rem will keep constant.
 
+# License
 
+[MIT](LICENSE)
 
