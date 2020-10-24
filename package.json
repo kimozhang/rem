@@ -11,19 +11,17 @@
   ],
   "scripts": {
     "demo": "http-server -o demo",
-    "build": "rollup -c"
+    "build": "rimraf dist && rollup -c",
+    "release": "npm run build && npm publish --access=public",
   },
   "keywords": [
     "rem"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kimozhang/rem.git"
   },
-  "author": "KimoZhang <1193055507@qq.com>",
+  "author": "Kimo Zhang <1193055507@qq.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/kimozhang/rem/issues"
@@ -32,6 +30,7 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
     "http-server": "^0.12.3",
+    "rimraf": "^3.0.2",
     "rollup": "^2.32.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.28.0",
