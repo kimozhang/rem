@@ -12,6 +12,7 @@ const rollupConfig = {
     {
       format: 'cjs',
       file: 'dist/rem.common.js',
+      exports: 'default'
     },
     {
       format: 'iife',
