@@ -1,4 +1,4 @@
-# Convert unit px to rem
+# Convert unit px to rem.
 
 ## Install
 
