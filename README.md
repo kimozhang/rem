@@ -23,7 +23,7 @@ $ yarn add @cany/rem
 ### Invoke
 
 ```js
-const Rem from '@cany/rem'
+import Rem from '@cany/rem'
 
 Rem.init()
 ```
