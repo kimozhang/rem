@@ -11,7 +11,11 @@
   ],
   "scripts": {
     "demo": "http-server -o demo",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "release": "npm run build && npm publish --access=public"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "rem"
