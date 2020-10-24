@@ -2,7 +2,7 @@ import resolve from '@rollup/plugin-node-resolve'
 import ts from 'rollup-plugin-typescript2'
 import { terser } from 'rollup-plugin-terser'
 
-const rollupConfig = {
+const config = {
   input: 'src/index.ts',
   output: [
     {
@@ -26,7 +26,7 @@ const rollupConfig = {
       plugins: [
         terser()
       ]
-    },
+    }
   ],
   plugins: [
     resolve(),
@@ -34,4 +34,4 @@ const rollupConfig = {
   ]
 }
 
-export default rollupConfig
+export default config

@@ -19,7 +19,7 @@ export default function debounce(
     fn()
   }
 
-  return function(...args: any[]) {
+  return function(this: any, ...args: any[]) {
     const context = this
 
     if (timer) {

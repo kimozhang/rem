@@ -1,9 +1,10 @@
 {
   "name": "@cany/rem",
   "version": "1.0.0",
-  "description": "",
+  "description": "Transform unit px to rem",
   "main": "dist/rem.common.js",
   "module": "dist/rem.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
     "src",
     "dist"
