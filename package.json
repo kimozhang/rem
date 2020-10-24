@@ -13,14 +13,22 @@
     "demo": "http-server -o demo",
     "build": "rollup -c"
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "keywords": [
     "rem"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimozhang/rem.git"
+  },
   "author": "KimoZhang <1193055507@qq.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimozhang/rem/issues"
+  },
+  "homepage": "https://github.com/kimozhang/rem#readme",
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
     "http-server": "^0.12.3",
