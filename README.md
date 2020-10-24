@@ -38,6 +38,10 @@ If there is a named header element in design, the width and height are 100px and
 
 You can know its value by simple calculations. 
 
+## API
+
+- init(options?: Object): init rem.
+
 ## Options
 
 - designWidth: width of design. default is 750.
