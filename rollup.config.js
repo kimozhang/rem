@@ -16,12 +16,12 @@ const rollupConfig = {
     },
     {
       format: 'iife',
-      name: 'setRem',
+      name: 'Rem',
       file: 'dist/rem.js',
     },
     {
       format: 'iife',
-      name: 'setRem',
+      name: 'Rem',
       file: 'dist/rem.min.js',
       plugins: [
         terser()
