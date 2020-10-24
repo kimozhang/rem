@@ -10,7 +10,7 @@ $ yarn add @cany/rem
 
 ## Example
 
-### Invoking
+### Invoke
 
 ```js
 const Rem from '@cany/rem'
