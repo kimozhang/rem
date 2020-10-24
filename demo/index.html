@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rem</title>
+  <style type="text/css">
+    #wrapper {
+      font-size: .3rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper"></div>
+
+  <script type="text/javascript" src="../dist/rem.js"></script>
+  <script type="text/javascript">
+    const options = {
+      base: 75,
+      designWidth: 750
+    }
+
+    Rem.init(options)
+
+    function $(selector) {
+      return document.querySelector(selector)
+    }
+
+    function handler() {
+      const $doc = document.documentElement
+      const $wrapper = $('#wrapper')
+      const clientWidth = $doc.clientWidth
+
+      $wrapper.innerHTML = `
+        designWidth: ${ options.designWidth }px <br>
+        base: ${ options.base }px <br>
+        1rem: ${ options.base / options.designWidth * clientWidth }px
+      `
+    }
+    
+    handler()
+
+    window.addEventListener('resize', handler)
+  </script>
+</body>
+</html>
