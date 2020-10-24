@@ -4,15 +4,15 @@ Convert unit px to rem.
 ## Install
 
 ```bash
-$ npm i @cany/rem
+$ npm i @sky/rem
 # or
-$ yarn add @cany/rem
+$ yarn add @sky/rem
 ```
 
 ## CDN
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@cany/rem/dist/rem.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@sky/rem/dist/rem.min.js"></script>
 ```
 
 ## Example
@@ -20,7 +20,7 @@ $ yarn add @cany/rem
 ### Invoke
 
 ```js
-const Rem from '@cany/rem'
+const Rem from '@sky/rem'
 
 Rem.init()
 ```

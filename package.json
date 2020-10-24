@@ -1,6 +1,6 @@
 {
-  "name": "@cany/rem",
-  "version": "0.0.1",
+  "name": "@sky/rem",
+  "version": "0.0.2",
   "description": "Convert unit px to rem",
   "main": "dist/rem.common.js",
   "module": "dist/rem.esm.js",
