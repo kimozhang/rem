@@ -27,7 +27,7 @@ Rem.init()
 
 ### CSS
 
-If there is a named header element in design, the width and height are 100px and 30px respectively. When the base option is set to 100 which is also default and recommended, then you can write as blow:
+If there is a named header element in design, the width and height are 100px and 30px respectively. When the base option is set to 100 which is also default and recommended, You can know its value by simple calculations and write as blow:
 
 ```css
 .header {
@@ -35,8 +35,6 @@ If there is a named header element in design, the width and height are 100px and
   height: .3rem;  /* .3rem = 30 / 100 */
 }
 ```
-
-You can know its value by simple calculations. 
 
 ## API
 
