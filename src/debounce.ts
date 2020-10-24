@@ -3,37 +3,31 @@ interface DebounceOptions {
   immediate?: boolean // whether to excute immediately
 }
 
+const DEFAULT_OPTIONS = {
+  interval: 100 / 60,
+  immediate: true
+}
+
 export default function debounce(
   fn: Function,
   options: DebounceOptions = {}
 ) {
-  const opts: DebounceOptions = Object.assign({}, debounce.defaultOptions, options)
+  const opts: DebounceOptions = Object.assign({}, DEFAULT_OPTIONS, options)
   let timer: any
+
+  if (opts.immediate) {
+    fn()
+  }
 
   return function(...args: any[]) {
     const context = this
 
-    if (opts.immediate) {
-      const callNow = !timer
-      if (callNow) {
-        fn.apply(context, args)
-      }
-      
-      timer && clearTimeout(timer)
-      timer = setTimeout(() => {
-        timer = null
-      }, opts.interval)
-      
-    } else {
-      timer && clearTimeout(timer)
-      timer = setTimeout(() => {
-        fn.apply(context, args)
-      }, opts.interval)
+    if (timer) {
+      clearTimeout(timer)
     }
+    
+    timer = setTimeout(() => {
+      fn.apply(context, args)
+    }, opts.interval)
   }
 }
-
-debounce.defaultOptions = {
-  interval: 50,
-  immediate: false
-} as DebounceOptions

@@ -11,16 +11,20 @@
 
 import debounce from './debounce'
 
-interface SetRemOptions {
+interface RemOptions {
   designWidth?: number,
   maxWidth?: number
 }
 
-function setRem(options: SetRemOptions = {}) {
-  const opts: SetRemOptions = Object.assign({}, setRem.defaultOptions, options)
+const DEFAULT_OPTIONS = {
+  designWidth: 750
+} 
+
+function init(options: RemOptions = {}) {
+  const opts: RemOptions = Object.assign({}, DEFAULT_OPTIONS, options)
   const $doc = document.documentElement
-  const base = 100
   const designWidth = opts.designWidth
+  const base = 100
   let maxWidth = opts.maxWidth
   let clientWidth: number
 
@@ -28,18 +32,18 @@ function setRem(options: SetRemOptions = {}) {
     clientWidth = $doc.clientWidth
 
     // 以宽为标准，达到最大尺寸时，不变
-    if (designWidth && (maxWidth || (maxWidth = designWidth)) && (clientWidth >= maxWidth)) {
+    if (maxWidth && (clientWidth >= maxWidth)) {
       clientWidth = maxWidth
     }
 
     $doc.style.fontSize = (base / designWidth) * clientWidth + 'px'
   }
 
-  window.addEventListener('resize', debounce(handler, { immediate: true }), false)
+  window.addEventListener('resize', debounce(handler), false)
 }
 
-setRem.defaultOptions = {
-  designWidth: 750
-} as SetRemOptions
+const Rem = {
+  init
+}
 
-export default setRem
+export default Rem
