@@ -13,6 +13,9 @@
     "demo": "http-server -o demo",
     "build": "rollup -c"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [
     "rem"
   ],
