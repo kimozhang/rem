@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-$ npm install @cany/rem
+$ npm i @cany/rem
 # or
 $ yarn add @cany/rem
 ```
