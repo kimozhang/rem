@@ -38,13 +38,13 @@ If there is a named header element in design, the width and height are 100px and
 
 ## API
 
-- init(options?: Object): init rem.
+- **init(options?: Object)**: init rem.
 
 ## Options
 
-- designWidth: width of design. default is 750.
-- base: baseline. default is 100 and recommended.
-- maxWidth: max width of client. default is null, when it is set and width of client is more than it, the rem will keep constant.
+- **designWidth**: width of design. default is 750.
+- **base**: baseline. default is 100 and recommended.
+- **maxWidth**: max width of client. default is null, when it is set and width of client is more than it, the rem will keep constant.
 
 # License
 
