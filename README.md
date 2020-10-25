@@ -44,7 +44,7 @@ If there is a named header element in design, the width and height are 100px and
 
 - designWidth: width of design. default is 750.
 - base: baseline. default is 100 and recommended.
-- maxWidth: max width of client. default is null, when it is set and more than it, the rem will keep constant.
+- maxWidth: max width of client. default is null, when it is set and width of client is more than it, the rem will keep constant.
 
 # License
 
