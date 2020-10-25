@@ -38,7 +38,7 @@ If there is a named header element in design, the width and height are 100px and
 
 ## API
 
-- **init(options?: Object)**: init rem.
+- **Rem.init(options?: Object)**: init rem.
 
 ## Options
 
