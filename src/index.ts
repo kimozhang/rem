@@ -30,7 +30,7 @@ function init(options: RemOptions = {}) {
   function handler() {
     clientWidth = $doc.clientWidth
 
-    // keep the width of client constant when reaching maxWidth
+    // keep rem constant when reaching maxWidth
     if (maxWidth && (clientWidth >= maxWidth)) {
       clientWidth = maxWidth
     }
