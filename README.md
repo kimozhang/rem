@@ -1,5 +1,5 @@
 # Rem
-Convert unit px to rem.
+Convert unit px to rem on mobile.
 
 ## Install
 
