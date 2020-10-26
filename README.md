@@ -13,6 +13,9 @@ $ yarn add @cany/rem
 
 ```html
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@cany/rem/dist/rem.min.js"></script>
+<script type="text/javascript">
+  Rem.init()
+</script>
 ```
 
 ## Example
