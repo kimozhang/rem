@@ -1,4 +1,4 @@
-# Rem
+# @cany/rem
 Convert unit px to rem on mobile.
 
 ## Install
