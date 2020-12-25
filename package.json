@@ -5,6 +5,8 @@
   "main": "index.js",
   "module": "dist/rem.es.js",
   "types": "dist/index.d.ts",
+  "unpkg": "dist/rem.global.js",
+  "jsdelivr": "dist/rem.global.js",
   "files": [
     "index.js",
     "dist"
