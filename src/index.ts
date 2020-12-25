@@ -10,8 +10,9 @@
  */
 
 import debounce from './debounce'
+import { extend } from './utils'
 
-interface RemOptions {
+interface Options {
   base?: number
   designWidth?: number
   maxWidth?: number
@@ -22,12 +23,8 @@ const DEFAULT_OPTIONS = {
   designWidth: 750,
 }
 
-function init(options: RemOptions = {}) {
-  const { base, designWidth, maxWidth } = Object.assign(
-    {},
-    DEFAULT_OPTIONS,
-    options
-  )
+function init(options?: Options) {
+  const { base, designWidth, maxWidth } = extend({}, DEFAULT_OPTIONS, options)
   const $doc = document.documentElement
   let clientWidth: number
 
