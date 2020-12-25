@@ -3,7 +3,7 @@
   "version": "0.0.3",
   "description": "Convert unit px to rem",
   "main": "index.js",
-  "module": "dist/rem.es.js",
+  "module": "dist/rem.esm.js",
   "types": "dist/index.d.ts",
   "unpkg": "dist/rem.global.js",
   "jsdelivr": "dist/rem.global.js",
