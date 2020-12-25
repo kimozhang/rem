@@ -2,17 +2,24 @@
   "name": "@cany/rem",
   "version": "0.0.2",
   "description": "Convert unit px to rem",
-  "main": "dist/rem.common.js",
-  "module": "dist/rem.esm.js",
+  "main": "index.js",
+  "module": "dist/rem.es.js",
   "types": "dist/index.d.ts",
   "files": [
-    "src",
+    "index.js",
     "dist"
   ],
   "scripts": {
-    "demo": "http-server -o demo",
-    "build": "rimraf dist && rollup -c",
-    "release": "npm run build && npm publish --access=public"
+    "dev": "webpack serve --env NODE_ENV=development",
+    "build": "node scripts/build.js",
+    "build:dev": "node scripts/build.js -e development",
+    "build:prod": "node scripts/build.js -e production",
+    "test": "jest --runInBand",
+    "lint": "eslint --ext .ts src/**/*",
+    "format": "prettier --parser=typescript --write \"src/**/*.ts\"",
+    "release": "node scripts/release.js",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "preinstall": "node ./scripts/checkYarn.js"
   },
   "keywords": [
     "mobile",
@@ -28,13 +35,48 @@
     "url": "https://github.com/kimozhang/rem/issues"
   },
   "homepage": "https://github.com/kimozhang/rem#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "src/**/*.ts": [
+      "eslint",
+      "prettier --parser=typescript --write"
+    ]
+  },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^9.0.0",
-    "http-server": "^0.12.3",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@rollup/plugin-replace": "^2.3.4",
+    "@types/jest": "^26.0.19",
+    "@types/node": "^14.14.14",
+    "@typescript-eslint/parser": "^4.9.1",
+    "chalk": "^4.1.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "eslint": "^7.13.0",
+    "eslint-webpack-plugin": "^2.3.0",
+    "html-webpack-plugin": "^5.0.0-alpha.14",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.1",
+    "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.32.1",
+    "rollup": "^2.33.1",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-typescript2": "^0.28.0",
-    "typescript": "^4.0.3"
+    "rollup-plugin-typescript2": "^0.29.0",
+    "semver": "^7.3.4",
+    "ts-loader": "^8.0.12",
+    "typescript": "^4.1.3",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   }
 }

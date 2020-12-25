@@ -1,29 +1,33 @@
 /**
  * implemention logic:
  * 1. formula: rem / clientWidth = base / designWidth
- * 2. When base is set to 100, you can get the CSS value in rem very simply, 
- *    which is calculated by value of design / 100。 
- * 
- * E.g: there is a div element which is 75px in design, 
+ * 2. When base is set to 100, you can get the CSS value in rem very simply,
+ *    which is calculated by value of design / 100。
+ *
+ * E.g: there is a div element which is 75px in design,
  * then the actual size is 0.75rem by 75 / 100
- * 
+ *
  */
 
 import debounce from './debounce'
 
 interface RemOptions {
-  base?: number,
-  designWidth?: number,
+  base?: number
+  designWidth?: number
   maxWidth?: number
 }
 
 const DEFAULT_OPTIONS = {
   base: 100,
-  designWidth: 750
-} 
+  designWidth: 750,
+}
 
 function init(options: RemOptions = {}) {
-  const { base, designWidth, maxWidth } = Object.assign({}, DEFAULT_OPTIONS, options)
+  const { base, designWidth, maxWidth } = Object.assign(
+    {},
+    DEFAULT_OPTIONS,
+    options
+  )
   const $doc = document.documentElement
   let clientWidth: number
 
@@ -31,7 +35,7 @@ function init(options: RemOptions = {}) {
     clientWidth = $doc.clientWidth
 
     // keep rem constant when reaching maxWidth
-    if (maxWidth && (clientWidth >= maxWidth)) {
+    if (maxWidth && clientWidth >= maxWidth) {
       clientWidth = maxWidth
     }
 
@@ -41,8 +45,4 @@ function init(options: RemOptions = {}) {
   window.addEventListener('resize', debounce(handler), false)
 }
 
-const Rem = {
-  init
-}
-
-export default Rem
+export { init }

@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "outDir": "dist",
     "target": "es5",
-    "strict": true,
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "preserve",
     "lib": ["esnext", "dom"],
-    "declaration": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "strict": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
-    "sourceMap": false
+    "noUnusedLocals": true,
+    "removeComments": false,
   },
   "include": [
-    "src"
+    "src/**/*", "__tests__",
   ],
-  "exclude": [
-    "node_modules"
-  ]
 }
