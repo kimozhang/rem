@@ -42,4 +42,6 @@ function init(options?: Options) {
   window.addEventListener('resize', debounce(handler), false)
 }
 
-export default init
+export default {
+  init,
+}
