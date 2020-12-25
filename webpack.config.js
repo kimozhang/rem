@@ -12,7 +12,7 @@ module.exports = (env) => {
     mode: env.NODE_ENV,
     devtool: devMode ? 'cheap-module-source-map' : false,
     entry: {
-      main: root('demo/index.ts'),
+      main: root('demo/main.ts'),
     },
     output: {
       path: root('dist'),
@@ -40,8 +40,6 @@ module.exports = (env) => {
       }),
       new HTMLWebpackPlugin({
         template: root('demo/index.html'),
-        inject: 'head',
-        scriptLoading: 'blocking',
       }),
     ],
     devServer: {

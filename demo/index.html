@@ -11,36 +11,8 @@
   </style>
 </head>
 <body>
-  <div id="wrapper"></div>
-
-  <script type="text/javascript" src="../dist/rem.js"></script>
-  <script type="text/javascript">
-    const options = {
-      base: 75,
-      designWidth: 750
-    }
-
-    Rem.init(options)
-
-    function $(selector) {
-      return document.querySelector(selector)
-    }
-
-    function handler() {
-      const $doc = document.documentElement
-      const $wrapper = $('#wrapper')
-      const clientWidth = $doc.clientWidth
-
-      $wrapper.innerHTML = `
-        designWidth: ${ options.designWidth }px <br>
-        base: ${ options.base }px <br>
-        1rem: ${ options.base / options.designWidth * clientWidth }px
-      `
-    }
-    
-    handler()
-
-    window.addEventListener('resize', handler)
-  </script>
+  <div id="wrapper">
+    I am default content
+  </div>
 </body>
 </html>
