@@ -1,4 +1,6 @@
 import * as Rem from '../src'
+// import * as Rem from '../dist/rem.esm'
+// import * as Rem from '../dist/rem.cjs'
 
 const options = {
   base: 100,
