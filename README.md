@@ -12,7 +12,7 @@ $ yarn add @cany/rem
 ## CDN
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@cany/rem"></script>
+<script type="text/javascript" src="https://unpkg.com/@cany/rem"></script>
 <script type="text/javascript">
   Rem.init()
 </script>
